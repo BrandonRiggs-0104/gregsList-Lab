@@ -10,6 +10,8 @@ export class Car {
     this.model = data.model
     this.miles = data.miles
     this.price = data.price
+    // NOTE or/pipes (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+    // NOTE if the value for data.description is falsy (undefined, null, '', etc.) this.description is set equal to the right hand side of the or statement
     this.description = data.description || "It's a car, and it's for sale"
     this.color = data.color
     this.ownedByGrandma = data.ownedByGrandma
@@ -43,6 +45,7 @@ export class Car {
   }
 
   get ComputeGrandmaBanner() {
+    // NOTE checks the boolean value of ownedByGrandma and returns HTML or nothing based on the conditional. ComputeGrandmaBanner is accessed in the CardTemplate getter above
 
     if (this.ownedByGrandma) {
       return `

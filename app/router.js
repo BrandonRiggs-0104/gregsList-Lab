@@ -23,8 +23,10 @@ export const router = [
     view: AboutView
   },
   {
+    // NOTE when our url reads "http://localhost:8080/#/cars", it loads our specified controller and injects our view into the HTML
     path: '#/cars',
     controller: CarsController,
+    // NOTE CarView returns a string of HTML that is injected into the #router-view in the index.html
     view: CarView
   }
 
